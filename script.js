@@ -1,21 +1,18 @@
 
-var data = new Date();
-var dia = String(data.getDate()).padStart(2, '0');
-var mes = String(data.getMonth() + 1).padStart(2, '0');
-var ano = data.getFullYear();
-currentDate = dia + '/' + mes + '/' + ano;
 
-ageCheck("23/12/2004", currentDate)
+ageCheck("00/00/0000")
 
 function ageCheck(birthDate, currentDate) {
-
+    
+    let data = new Date();
     let birthDay = birthDate.substr(0, 2)
     let birthMonth = birthDate.substr(3, 2)
     let birthYear = birthDate.substr(6, 4)
 
-    let currentDay = currentDate.substr(0, 2)
-    let currentMonth = currentDate.substr(3, 2)
-    let currentYear = currentDate.substr(6, 4)
+    let currentDay = String(data.getDate()).padStart(2, '0');
+    let currentMonth = String(data.getMonth() + 1).padStart(2, '0');
+    let currentYear = data.getFullYear();
+    currentDate = currentDay + '/' + currentMonth + '/' + currentYear;
 
     age = currentYear - birthYear
     
